@@ -1,8 +1,0 @@
-# This builds the image to run Xuver component
-
-ARG IMAGES_BASE_PATH=""
-FROM ${IMAGES_BASE_PATH}nginx:1.15.2
-
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 TIMEZONE=GMT+0
-
-COPY ci-work/Dockerfile-runner /
