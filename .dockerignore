@@ -1,0 +1,21 @@
+# going to keep a unique .dockerignore file for all projects
+**
+!ci-work/
+!docker/
+!xversion.html
+!xversion.env
+
+!dist/
+!apple-app-site-association
+!downloads/
+
+!node_modules/
+!package.json
+!package-lock.json
+!next.config.js
+!public/
+
+!out/
+!certs/
+
+!build/installed/

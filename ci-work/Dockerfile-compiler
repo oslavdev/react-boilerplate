@@ -1,0 +1,20 @@
+# This builds the image to compile Xuver component
+
+ARG IMAGES_BASE_PATH=""
+FROM ${IMAGES_BASE_PATH}ubuntu:18.04
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 TIMEZONE=GMT+0
+ENV NODEJS_VERSION='14' NPM_VERSION='6.14.8'
+
+RUN apt-get update -q && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yqq curl build-essential git nano python3-pip && \
+  pip3 install njsscan && \
+  \
+  (curl -sL https://deb.nodesource.com/setup_${NODEJS_VERSION}.x | bash -) && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yqq nodejs && \
+  npm install -g npm@${NPM_VERSION} && \
+  npm install -g retire && \
+  \
+  apt-get -yqq clean && apt-get -yqq autoclean && apt-get -yqq autoremove && rm -rf /var/lib/apt-get/lists/* /var/lib/apt/lists/*
+
+COPY ci-work/Dockerfile-compiler /
