@@ -8,6 +8,7 @@
 		"url": "git@github.com:RijelEk/test-delivery.git"
 	},
 	"scripts": {
+		"start": "webpack --mode production",
 		"dev":"webpack-dev-server --config webpack.config.js --open",
 		"build": "webpack --config webpack.config.prod.js",
 		"test": "jest --ci --reporters=default --reporters=jest-junit --testResultsProcessor=jest-junit",
