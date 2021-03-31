@@ -1,5 +1,7 @@
 # going to keep a unique .dockerignore file for all projects
 **
+!prod
+!https
 !ci-work/
 !docker/
 !xversion.html
