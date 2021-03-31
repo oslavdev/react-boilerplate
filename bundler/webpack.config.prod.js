@@ -26,7 +26,7 @@ module.exports = {
 	plugins: [
 		new MiniCssExtractPlugin({ filename: '[name].[contenthash].css', chunkFilename: '[name].[contenthash].css' }),
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, '.../index.html')
+			template: path.join(__dirname, '../index.html')
 		}),
 		new ImageminPlugin({
 			// minimize images

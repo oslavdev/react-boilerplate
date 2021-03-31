@@ -1,7 +1,7 @@
 # going to keep a unique .gitignore file for all projects
 
-#dev
-.next
+#keys
+https
 
 #modules
 node_modules
@@ -9,8 +9,8 @@ node_modules
 #cache
 .cache
 
-#dist
-dist
+#prod
+prod
 
 #tests
 __tests__log.txt
